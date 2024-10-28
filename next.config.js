@@ -25,7 +25,7 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['192.168.0.34'], // Add your domain here
+    domains: ['https://alimentaire-api.vercel.app'], // Add your domain here
   }
 
 };
