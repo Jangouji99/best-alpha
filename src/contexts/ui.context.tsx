@@ -5,6 +5,7 @@ import { getToken } from '@framework/utils/get-token';
 import { CartProvider } from './cart/cart.context';
 import { ModalProvider } from '@components/common/modal/modal.context';
 import { CompanyProvider } from './company/company-context';
+import { Analytics } from "@vercel/analytics/react"
 
 export interface State {
   isAuthorized: boolean;
@@ -344,6 +345,7 @@ export function ManagedUIContext({ children }: React.PropsWithChildren<{}>) {
           </UIProvider>
         </CompanyProvider>
       </CartProvider>
+      <Analytics />
     </>
 
   );

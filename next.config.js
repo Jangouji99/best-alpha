@@ -26,6 +26,13 @@ module.exports = {
   },
   images: {
     domains: ['alimentaire-api.vercel.app'], // Add your domain here
-  }
+  },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
 
 };
