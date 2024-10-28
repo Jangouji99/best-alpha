@@ -12,7 +12,7 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_REST_API_ENDPOINT
+  const baseUrl = process.env.NEXT_PUBLIC_URL_PRODUCT_IMG
   const publicUrl = process.env.NEXT_PUBLIC_WEBSITE_URL
   const productDetailsResponse = await fetch(`${baseUrl}${API_ENDPOINTS.PRODUCTS_BY_SLUG}/${params.slug}?lang=${params.lang}$fields=seo,thumbnail,name,description,tags`).then((res) => res.json()) as ProductDetailsResponse
   const { data: { product } } = productDetailsResponse
